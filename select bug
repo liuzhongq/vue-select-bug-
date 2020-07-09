@@ -7,7 +7,7 @@
               :key="index"
             >{{item.billPaymentType}}</Option>
  </Select>
- 以上要从select中选择一项进行赋值，从而传值给后台，但是当你想选择value=""的这一项的时候，视觉效果是你选中了，但是当你传值后台的时候你会发现select的值依旧是上一次选中的值
+ 以上要从select中选择一项进行赋值，从而传值给后台，但是当你想选择value=""的这一项的时候，视觉效果是你选中了，当你传值后台的时候你会发现select的值依旧是上一次选中的值
  个人猜想：当你选中value为空的这一项时，vue自动赋值上一次你所选中的值,但与需求不符
  解决办法：
  <Select v-model="payMethodUpdateData.billPaymentTypeId">
