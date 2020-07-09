@@ -1,0 +1,22 @@
+// !!!!!!!!select Bug!!!!!!!!!!
+<Select v-model="payMethodUpdateData.billPaymentTypeId">
+            <Option value=""></Option>
+            <Option
+              v-for="(item, index) in this.billPaymentTypes"
+              :value="item.billPaymentTypeId"
+              :key="index"
+            >{{item.billPaymentType}}</Option>
+ </Select>
+ 以上要从select中选择一项进行赋值，从而传值给后台，但是当你想选择value=""的这一项的时候，视觉效果是你选中了，但是当你传值后台的时候你会发现select的值依旧是上一次选中的值
+ 个人猜想：当你选中value为空的这一项时，vue自动赋值上一次你所选中的值
+ 解决办法：
+ <Select v-model="payMethodUpdateData.billPaymentTypeId">
+            <Option value=null label=" "></Option>
+            <Option
+              v-for="(item, index) in this.billPaymentTypes"
+              :value="item.billPaymentTypeId"
+              :key="index"
+            >{{item.billPaymentType}}</Option>
+ </Select>
+  将value=""改为value=null，以此用null赋值才会真正赋值，并可以传值给后台
+ 
