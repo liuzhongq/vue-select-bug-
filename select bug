@@ -2,7 +2,7 @@
 <Select v-model="payMethodUpdateData.billPaymentTypeId">
             <Option value=""></Option>
             <Option
-              v-for="(item, index) in this.billPaymentTypes"
+              v-for="(item, index) in billPaymentTypes"
               :value="item.billPaymentTypeId"
               :key="index"
             >{{item.billPaymentType}}</Option>
