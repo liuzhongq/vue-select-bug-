@@ -18,5 +18,5 @@
               :key="index"
             >{{item.billPaymentType}}</Option>
  </Select>
-  将value=""改为value=null，以此用null赋值才会真正赋值，并可以传值给后台
+  将value=""改为value=" "或value=null，以此用null赋值才会真正赋值，并可以传值给后台
  
