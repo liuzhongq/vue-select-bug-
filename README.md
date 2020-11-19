@@ -2,4 +2,4 @@
 a select Bug！！！！
 
 
-项目中遇到的vue的select  bug
+项目中遇到的vue的select标签  bug
